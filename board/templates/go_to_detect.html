@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breast Cancer Staging</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <!-- Home Button -->
+  <div class="home-button">
+    <a href="web_html.html">&#x2190; Home</a>
+</div>
+
+  <main>
+    <section class="stages">
+      <div class="stage-icons">
+        <img src="static/assets/stage0.png" alt="Stage 0">
+        <p>Stage 0</p>
+        <img src="static/assets/stage1.png" alt="Stage I">
+        <p>Stage I</p>
+        <img src="static/assets/stage2.png" alt="Stage II">
+        <p>Stage II</p>
+        <img src="static/assets/stage3.png" alt="Stage III">
+        <p>Stage III</p>
+        <img src="static/assets/stage4.png" alt="Stage IV">
+        <p>Stage IV</p>
+      </div>
+      <p class="info-text">In the diabetic retinopathy grading demo...</p>
+    </section>
+
+    <section class="upload">
+      <div class="warning">
+        <p>
+          <strong>!</strong> Please be aware that by uploading an image...
+        </p>
+      </div>
+      <div class="choose-image">
+        <p>Choose Image:</p>
+        <div class="image-options">
+          <div>Option 1</div>
+          <div>Option 2</div>
+          <div>Option 3</div>
+        </div>
+        <p>OR</p>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+          <input type="file" name="file" />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>UNIVERSITAS GADJAH MADA</strong></p>
+    <address>Bulaksumur, Yogyakarta...</address>
+  </footer>
+</body>
+</html>

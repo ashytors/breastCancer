@@ -1,6 +1,6 @@
 #inisialisasi konfigurasi aplikasi
-
 from flask import Flask
+from .routes import bp as routes_bp
 
 def create_app():
     app = Flask(__name__, template_folder='templates')
@@ -10,7 +10,6 @@ def create_app():
     app.config['ALLOWED_EXTENSIONS'] = {'png', 'jpg', 'jpeg'}
 
     #register b;ueprint
-    from .routes import bp as routes_bp
     app.register_blueprint(routes_bp)
 
     return app

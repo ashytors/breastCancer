@@ -9,11 +9,29 @@ import numpy as np
 #blueprint
 bp = Blueprint('routes', __name__)
 
+#HOME
 @bp.route('/')
 def home():
     print("Template folder:", os.path.abspath('templates'))
-    return render_template('index.html')
+    return render_template('web_html.html')
 
+#ABOUT
+@bp.route('/about')
+def about():
+    return render_template('about_us.html')
+
+#SOURCE
+@bp.route('/source')
+def source():
+    return render_template('source.html')
+
+#goto detect
+@bp.route('/predict')
+def detect():
+    return render_template('go_to_detect.html')
+
+#PREDICT
+#upload, post image
 @bp.route('/predict', methods=['POST'])
 def predict():
     if 'file' not in request.files:
