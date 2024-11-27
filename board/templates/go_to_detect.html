@@ -14,46 +14,51 @@
 
   <main>
     <section class="stages">
+      <h2>Breast Cancer</h2>
       <div class="stage-icons">
-        <img src="static/assets/stage0.png" alt="Stage 0">
-        <p>Stage 0</p>
-        <img src="static/assets/stage1.png" alt="Stage I">
-        <p>Stage I</p>
-        <img src="static/assets/stage2.png" alt="Stage II">
-        <p>Stage II</p>
-        <img src="static/assets/stage3.png" alt="Stage III">
-        <p>Stage III</p>
-        <img src="static/assets/stage4.png" alt="Stage IV">
-        <p>Stage IV</p>
+        <img src="static/assets/breast-cancer-stages.png" alt="breast cancer stages">
       </div>
-      <p class="info-text">In the diabetic retinopathy grading demo...</p>
+      <p class="info-text">Histopathology images are a crucial tool in breast cancer detection, providing detailed insights into cellular structures and enabling pathologists to diagnose and assess the severity of the disease. Advanced methods such as deep learning have revolutionized breast cancer detection by analyzing histopathology images, offering automated and precise identification of malignant patterns. The use of digital histopathology images in breast cancer research has facilitated the development of robust diagnostic systems, enhancing early detection and improving treatment outcomes.</p>
     </section>
 
     <section class="upload">
       <div class="warning">
-        <p>
-          <strong>!</strong> Please be aware that by uploading an image...
-        </p>
+          <div class="warning-img">
+              <img src="static/assets/warning.png" alt="warning sign">
+          </div>
+          <div class="warning-text">
+              <p>Please be aware that by uploading an image to the server, you consent to the storage and processing of your data in accordance with our privacy policy. The medical images uploaded to this platform are for informational purposes only and are not intended for diagnostic use. These images should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare provider regarding any medical concerns or decisions based on the images. We do not take responsibility for any interpretation or decisions made based on the uploaded images.</p>
+          </div>
       </div>
-      <div class="choose-image">
-        <p>Choose Image:</p>
-        <div class="image-options">
-          <div>Option 1</div>
-          <div>Option 2</div>
-          <div>Option 3</div>
-        </div>
-        <p>OR</p>
-        <form action="/predict" method="post" enctype="multipart/form-data">
-          <input type="file" name="file" />
-          <button type="submit">Submit</button>
-        </form>
+  
+      <div class="image-upload">
+          <p>Examples of Histopathology Image:</p>
+          <div class="histopathology-examples">
+              <div class="example"><img src="static/assets/examples-1.png" alt="histopathology image"></div>
+              <div class="example"><img src="static/assets/examples-2.png" alt="histopathology image"></div>
+              <div class="example"><img src="static/assets/examples-3.png" alt="histopathology image"></div>
+          </div>
+          <p>Upload Your Image</p>
+          <form action="/predict" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" />
+            <button type="submit">Submit</button>
+          </form>
       </div>
-    </section>
+  </section> 
   </main>
 
   <footer>
-    <p><strong>UNIVERSITAS GADJAH MADA</strong></p>
-    <address>Bulaksumur, Yogyakarta...</address>
-  </footer>
+    <div class="footer-content">
+        <div class="oncomammo-footer">
+            <img src="static/assets/logo-oncomammo.png" alt="logo">
+            <h3>ONCOMAMMO</h3>
+        </div>
+        <div class="address-footer">
+            <img src="static/assets/loc-symbol.png" alt="location symbol">
+            <p>Grafika No.2, Senolowo, Sinduadi, Kec. Mlati, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281</p>
+        </div>
+           <p>oncomammo@gmail.com</p>
+    </div>
+</footer>
 </body>
 </html>
